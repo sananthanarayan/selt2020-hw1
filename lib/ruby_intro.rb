@@ -4,14 +4,17 @@
 
 def sum arr
   # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  arr.sort { |x,y| y <=> x }.take(2).reduce(:+)
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  (arr.empty? && n.zero?) || arr.permutation(2).any? { |a, b| a + b == n}
 end
 
 # Part 2
